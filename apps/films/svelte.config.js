@@ -7,7 +7,7 @@ export default {
     sveltePreprocess({
       postcss: true,
       scss: {
-        prependData: '@use "src/variables.scss" as *;'
+        prependData: '@use "src/styles/variables.scss" as *;'
       },
       sourceMap: !!process.env.TAURI_DEBUG
     })
