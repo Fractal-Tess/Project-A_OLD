@@ -1,11 +1,14 @@
 const daisyui = require('daisyui');
 const defaultTheme = require('tailwindcss/defaultTheme');
+const { join } = require('path');
+
+const ui_path = join(__dirname, '../ui');
 
 /** @type {import('tailwindcss').Config} */
 const config = {
 	content: [
-		'../ui/**/*.{html,js,svelte,ts}',
-		'../../apps/**/*.{html,js,svelte,ts}'
+		`${ui_path}/**/*.{html,js,svelte,ts}`,
+		'src/**/*.{html,js,svelte,ts}'
 	],
 	darkMode: 'class',
 
