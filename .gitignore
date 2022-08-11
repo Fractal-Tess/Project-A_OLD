@@ -32,6 +32,9 @@ yarn-error.log*
 # turbo
 .turbo
 
+#svelte/sveltekit
+build
+dist
 
 # tauri
 target
