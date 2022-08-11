@@ -1,0 +1,36 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "allowJs": true,
+    "checkJs": true,
+    "isolatedModules": true,
+    "paths": {
+      "$lib": ["src/lib"],
+      "$lib/*": ["src/lib/*"],
+      "$styles": ["src/styles/app.scss"],
+      "$types": ["src/types.ts"],
+      "$stores": ["src/lib/stores"],
+      "$stores/*": ["src/lib/stores/*"],
+      "$src": ["src/"],
+      "$src/*": ["src/*"],
+      "$assets": ["src/assets"],
+      "$assets/*": ["src/assets/*"],
+      "$util": ["src/lib/util"],
+      "$util/*": ["src/lib/util/*"]
+    },
+    "typeRoots": ["src/global.d.ts"],
+
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
