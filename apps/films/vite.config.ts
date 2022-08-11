@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
-import { resolve } from 'node:path';
+
+const getPath = (path: string): string =>
+  new URL(path, import.meta.url).pathname;
 
 export default defineConfig({
   plugins: [svelte()],
@@ -15,13 +17,13 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      $styles: resolve('src/styles/app.scss'),
-      $lib: resolve('src/lib/'),
-      $src: resolve('src/'),
-      $types: resolve('src/types.ts'),
-      $assets: resolve('src/assets/'),
-      $stores: resolve('src/lib/stores/'),
-      $util: resolve('src/lib/util')
+      $styles: getPath('src/styles/'),
+      $lib: getPath('src/lib/'),
+      $src: getPath('src/'),
+      $types: getPath('src/types'),
+      $assets: getPath('src/assets/'),
+      $stores: getPath('src/lib/stores/'),
+      $util: getPath('src/util/')
     }
   },
 
