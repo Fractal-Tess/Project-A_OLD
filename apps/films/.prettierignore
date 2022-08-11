@@ -1,16 +1,13 @@
-.DS_Store
-node_modules
-/build
-/dist
-/.svelte-kit
-/package
-.env
-.env.*
-!.env.example
-target
-webtorrent.min.js
+**/*.min.js
+**/*.min.css
 
-# Ignore files for PNPM, NPM and YARN
-pnpm-lock.yaml
-package-lock.json
-yarn.lock
+.idea/
+node_modules/
+
+# Build dir
+dist/
+build/
+target
+
+# Artifacts
+webtorrent.min.js
