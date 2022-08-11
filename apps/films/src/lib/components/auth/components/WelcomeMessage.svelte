@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class="text-center text-3xl h-24 font-bold select-none flex items-center justify-center cursor-default"
+  class="text-center text-3xl h-16 font-bold select-none flex items-center justify-center cursor-default"
 >
   <h1>Welcome to</h1>
   <img
