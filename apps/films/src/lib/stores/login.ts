@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { writable } from 'svelte/store';
 import { z } from 'zod';
 
