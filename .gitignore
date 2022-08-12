@@ -5,6 +5,7 @@ node_modules
 .pnp
 .pnp.js
 
+
 # testing
 coverage
 
@@ -33,6 +34,7 @@ yarn-error.log*
 .turbo
 
 #svelte/sveltekit
+.svelte-kit
 build
 dist
 
