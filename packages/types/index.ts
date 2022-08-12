@@ -1,1 +1,1 @@
-export type test = 'testing';
+export * from './theme/theme';
