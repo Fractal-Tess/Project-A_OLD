@@ -6,10 +6,6 @@
     "useDefineForClassFields": true,
     "module": "ESNext",
     "resolveJsonModule": true,
-
-    "allowJs": true,
-    "checkJs": true,
-    "isolatedModules": true,
     "typeRoots": ["src/global.d.ts"],
     "baseUrl": ".",
     "paths": {
