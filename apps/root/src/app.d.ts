@@ -2,10 +2,15 @@
 // for information about these interfaces
 // and what to do when importing types
 declare namespace App {
-  // interface Locals {}
+  import type { Theme } from 'config/theme';
+  interface Locals {
+    theme: Theme | null;
+  }
   // interface Platform {}
   // interface PrivateEnv {}
   // interface PublicEnv {}
-  // interface Session {}
+  interface Session {
+    theme: Theme | null;
+  }
   // interface Stuff {}
 }
