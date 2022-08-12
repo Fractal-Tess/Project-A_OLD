@@ -31,7 +31,8 @@ export default defineConfig({
 
   server: {
     port: 29890,
-    strictPort: true
+    strictPort: true,
+    host: '0.0.0.0'
   },
   build: {
     minify: !isDev,
