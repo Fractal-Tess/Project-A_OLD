@@ -9,14 +9,15 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
+    "baseUrl": ".",
+
     "paths": {
       "$lib/*": ["src/lib/*"],
       "$styles": ["src/styles/app.scss"],
       "$types": ["src/types.ts"],
       "$stores/*": ["src/lib/stores/*"],
       "$src/*": ["src/*"],
-      "$assets/*": ["src/assets/*"],
-      "$util/*": ["src/lib/util/*"]
+      "$assets/*": ["src/assets/*"]
     }
   }
 }
