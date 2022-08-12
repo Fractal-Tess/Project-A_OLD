@@ -18,12 +18,11 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      $types: getPath('src/types.ts'),
       $styles: getPath('src/styles/app.scss'),
-      $src: getPath('src/'),
-      $types: getPath('src/types'),
-      $assets: getPath('src/assets/'),
       $stores: getPath('src/lib/stores/'),
-      $util: getPath('src/util/')
+      $src: getPath('src/'),
+      $assets: getPath('src/assets/')
     }
   },
 
