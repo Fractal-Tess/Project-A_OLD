@@ -2,6 +2,7 @@
   import '$styles';
   import { theme } from '$lib/stores/theme';
   import { browser } from '$app/env';
+  import Header from 'ui/web/header/Header.svelte';
 
   $: {
     if (browser) {
@@ -11,7 +12,11 @@
   }
 </script>
 
-<main class="bg-base-300 text-base-content h-screen flex flex-col">
-  <button on:click={theme.toggleTheme}> change theme </button>
-  <slot />
-</main>
+<div class="flex-1 text-base-content font-roboto">
+  <Header />
+
+  <main>
+    <slot />
+  </main>
+  <footer />
+</div>
