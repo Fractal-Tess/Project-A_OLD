@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "baseUrl": ".",
+    "paths": {
+      "$models": ["./prisma/models/index.ts"],
+      "$prisma/client": ["./prisma/client.ts"],
+      "$types": ["./types.ts"],
+      "$env": ["./env/env.ts"],
+      "$router": ["./routes/router.ts"]
+    },
+    "sourceMap": true,
+    "outDir": "../build/express/",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules/**/*.*"]
+}

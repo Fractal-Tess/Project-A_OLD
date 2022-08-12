@@ -1,0 +1,5 @@
+{
+  "watch": "build/express/",
+  "delay": 500,
+  "exec": "node build/express"
+}

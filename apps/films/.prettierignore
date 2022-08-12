@@ -8,6 +8,3 @@ node_modules/
 dist/
 build/
 target
-
-# Artifacts
-webtorrent.min.js

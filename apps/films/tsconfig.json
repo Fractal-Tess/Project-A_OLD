@@ -13,17 +13,12 @@
     "typeRoots": ["src/global.d.ts"],
     "baseUrl": ".",
     "paths": {
-      "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"],
       "$styles": ["src/styles/app.scss"],
       "$types": ["src/types.ts"],
-      "$stores": ["src/lib/stores"],
       "$stores/*": ["src/lib/stores/*"],
-      "$src": ["src/"],
       "$src/*": ["src/*"],
-      "$assets": ["src/assets"],
       "$assets/*": ["src/assets/*"],
-      "$util": ["src/lib/util"],
       "$util/*": ["src/lib/util/*"]
     }
   },

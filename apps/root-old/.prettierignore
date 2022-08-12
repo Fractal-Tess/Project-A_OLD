@@ -1,0 +1,7 @@
+# Project build dir
+build
+
+# node
+node_modules
+
+

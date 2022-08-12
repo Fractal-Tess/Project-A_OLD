@@ -17,7 +17,7 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      $styles: getPath('src/styles/'),
+      $styles: getPath('src/styles/app.scss'),
       $lib: getPath('src/lib/'),
       $src: getPath('src/'),
       $types: getPath('src/types'),
