@@ -1,0 +1,11 @@
+{
+  "name": "utils",
+  "version": "0.0.1",
+  "devDependencies": {
+    "@types/cookie": "^0.5.1",
+    "cookie": "^0.5.0",
+    "moment": "^2.29.4",
+    "types": "workspace:*",
+    "zod": "^3.18.0"
+  }
+}
