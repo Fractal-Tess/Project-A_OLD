@@ -1,28 +1,21 @@
-import type { Theme } from '$lib/stores/theme';
 import type { GetSession, Handle } from '@sveltejs/kit';
-import { isTheme } from '../types';
-import type { Writable } from 'svelte/store';
-
-export type SessionData = { theme: Theme };
-export type SessionStore = Writable<SessionData>;
-
-export const getCookieValue = (
-  cookie: string | null,
-  name: string
-): string | null =>
-  cookie?.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || null;
-
-const getThemeFromCookie = (cookie: string) => {
-  const theme = getCookieValue(cookie, 'theme');
-  return isTheme(theme) ? theme : null;
-};
+import { validateTheme, defaultTheme } from 'utils';
+import cookie from 'cookie';
 
 export const handle: Handle = async ({ event, resolve }) => {
-  const cookie = event.request.headers.get('cookie');
-  event.locals.theme = getThemeFromCookie(cookie);
+  const cookies = event.request.headers.get('cookie') || '';
 
-  return resolve(event);
+  const { theme } = cookie.parse(cookies);
+  event.locals.theme = validateTheme(theme) ? theme : null;
+
+  return resolve(event, {
+    transformPageChunk: ({ html }) =>
+      // On the very first request, the theme cookie will be '', so the event.locals.theme will resolve to null.
+      // For that single request, we default to the defaultTheme
+      html.replaceAll('$theme$', event.locals.theme || defaultTheme)
+  });
 };
+
 export const getSession: GetSession = ({ locals }) => {
   const theme = locals.theme;
   return { theme };

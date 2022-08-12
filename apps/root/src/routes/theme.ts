@@ -1,28 +1,27 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { isTheme } from '../types';
+import { setCookieTheme, validateTheme } from 'utils';
 
-// PUT /theme
-export const put: RequestHandler = async ({ request }) => {
-  const theme = await request.text();
+// TODO: add more configs to the cookie header response
 
-  if (!isTheme(theme)) {
+export const PUT: RequestHandler = async ({ request }) => {
+  try {
+    const { theme } = await request.json();
+    if (!validateTheme(theme)) {
+      return {
+        status: 400,
+        body: { message: 'Invalid theme' }
+      };
+    }
+
+    return {
+      headers: {
+        'set-cookie': setCookieTheme(theme)
+      }
+    };
+  } catch (error) {
     return {
       status: 400,
-      body: `not a valid theme value: ${theme}`
+      body: { message: 'Cannot parse request' }
     };
   }
-
-  return {
-    headers: {
-      'Set-Cookie': `theme=${theme}; SameSite=Strict; HttpOnly; Secure`
-    }
-  };
 };
-
-// DELETE /theme
-export const del: RequestHandler = async () => ({
-  status: 204,
-  headers: {
-    'Set-Cookie': `theme= ; Max-Age=0; SameSite=Strict; HttpOnly; Secure`
-  }
-});
