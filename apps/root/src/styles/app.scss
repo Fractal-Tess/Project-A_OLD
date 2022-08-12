@@ -2,8 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'fonts/node_modules/@fontsource/fira-code/index.css';
+@import 'fonts/node_modules/@fontsource/fira-mono/index.css';
+@import 'fonts/node_modules/@fontsource/fira-sans/index.css';
+@import 'fonts/node_modules/@fontsource/roboto/index.css';
+
 html {
   -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  @apply min-h-screen bg-base-100;
 }
 
 /* css vars */

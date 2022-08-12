@@ -1,0 +1,19 @@
+{
+  "name": "fonts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fontsource/alumni-sans-inline-one": "^4.5.2",
+    "@fontsource/fira-code": "^4.5.11",
+    "@fontsource/fira-mono": "^4.5.9",
+    "@fontsource/fira-sans": "^4.5.9",
+    "@fontsource/roboto": "^4.5.8"
+  }
+}
