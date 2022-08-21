@@ -1,4 +1,4 @@
-const monorepoConfig = require('config/postcss.config.cjs');
+const monorepoConfig = require('@package/config/postcss.config.cjs');
 
 const config = {
   ...monorepoConfig

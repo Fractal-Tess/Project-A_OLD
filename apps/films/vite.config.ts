@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 
-const getPath = (path: string): string =>
-  new URL(path, import.meta.url).pathname;
+const getPath = (path: string): string => new URL(path, import.meta.url).pathname;
 
 export default defineConfig({
   plugins: [svelte()],
@@ -10,20 +9,20 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@use "src/styles/variables.scss" as *;'
+        additionalData: '@use "./src/styles/variables.scss" as *;'
       }
     }
   },
 
   resolve: {
     alias: {
-      $styles: getPath('src/styles/app.scss'),
-      $lib: getPath('src/lib/'),
-      $src: getPath('src/'),
-      $types: getPath('src/types'),
-      $assets: getPath('src/assets/'),
-      $stores: getPath('src/lib/stores/'),
-      $util: getPath('src/util/')
+      $styles: getPath('./src/styles/app.scss'),
+      $lib: getPath('./src/lib/'),
+      $src: getPath('./src/'),
+      $types: getPath('./src/types'),
+      $assets: getPath('./src/assets/'),
+      $stores: getPath('./src/lib/stores/'),
+      $util: getPath('./src/util/')
     }
   },
 
@@ -32,7 +31,7 @@ export default defineConfig({
   clearScreen: false,
   server: {
     strictPort: true,
-    port: 3000,
+    port: 3001,
     host: '0.0.0.0'
   },
   envPrefix: ['VITE_', 'TAURI_'],

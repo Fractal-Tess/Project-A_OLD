@@ -3,8 +3,8 @@
 
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".build/**"]
+      "outputs": ["build/**", ".svelte-kit/**", "svelte-kit/**"],
+      "dependsOn": ["^build"]
     },
     "dev": {
       "cache": false
@@ -15,5 +15,6 @@
     "format": {
       "outputs": []
     }
-  }
+  },
+  "globalDependencies": [".env"]
 }

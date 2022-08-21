@@ -39,10 +39,7 @@
     >
     <label class="label label-text-alt">
       Don't need recovery?
-      <button
-        on:click|preventDefault={gotoLogin}
-        class="label-text-alt cursor-default"
-      >
+      <button on:click|preventDefault={gotoLogin} class="label-text-alt cursor-default">
         <span
           class="ml-2 text-secondary underline underline-offset-2 decoration-secondary cursor-pointer"
           >Login</span

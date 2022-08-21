@@ -1,4 +1,9 @@
 {
-	"name": "ui",
-	"version": "0.0.1"
+  "name": "@package/ui",
+  "version": "0.0.1",
+  "devDependencies": {
+    "@package/assets": "workspace:*",
+    "@package/common": "workspace:*"
+  },
+  "type": "module"
 }

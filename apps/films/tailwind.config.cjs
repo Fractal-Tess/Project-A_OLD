@@ -1,4 +1,4 @@
-const monorepoConfig = require('config/tailwind.config.cjs');
+const monorepoConfig = require('@package/config/tailwind.config.cjs');
 
 const config = {
   ...monorepoConfig

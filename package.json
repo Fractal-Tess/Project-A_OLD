@@ -8,11 +8,14 @@
     "packages/*"
   ],
   "scripts": {
+    "preinstall": "node ./tools/package-inherit/dist/package-inherit-cli.js update",
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "format": "turbo run format"
   },
   "devDependencies": {
+    "@types/node": "^18.7.8",
+    "prettier-plugin-svelte": "^2.7.0",
     "turbo": "latest"
   }
 }

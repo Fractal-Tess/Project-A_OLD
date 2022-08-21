@@ -1,6 +1,5 @@
 <script lang="ts">
-  export let gradient =
-    'bg-gradient-to-r from-secondary  via-primary to-secondary';
+  export let gradient = 'bg-gradient-to-r from-secondary  via-primary to-secondary';
   export let animateGradientX = true;
   export let padding = 'p-1';
   export let width = 'w-3/4';
@@ -10,9 +9,7 @@
 
 <div
   class="{rounded} {height} {gradient} {padding} {width}  
-     {animateGradientX
-    ? 'animate-gradient-animation-x'
-    : ''}  bg-base-100 shadow-2xl bg-300"
+     {animateGradientX ? 'animate-gradient-animation-x' : ''}  bg-base-100 shadow-2xl bg-300"
 >
   <div class="flex {rounded} shadow-xl  bg-base-300 h-full ">
     <slot />

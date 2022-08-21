@@ -8,7 +8,7 @@
 
 <ThemeWrapper>
   <TopBar />
-  {#if $isServerOnlineStore}
+  {#if !$isServerOnlineStore}
     <Online />
   {:else}
     <Offline />

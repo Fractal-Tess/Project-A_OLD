@@ -1,22 +1,18 @@
-import type { GetSession, Handle } from '@sveltejs/kit';
-import { validateTheme, defaultTheme } from 'utils';
-import cookie from 'cookie';
+import type { Handle } from '@sveltejs/kit';
+import { defaultTheme, validateTheme } from '@package/utils/theme';
+import { parseCookies } from '@package/utils/cookies/parseCookies';
 
-export const handle: Handle = async ({ event, resolve }) => {
-  const cookies = event.request.headers.get('cookie') || '';
-
-  const { theme } = cookie.parse(cookies);
-  event.locals.theme = validateTheme(theme) ? theme : null;
-
-  return resolve(event, {
-    transformPageChunk: ({ html }) =>
-      // On the very first request, the theme cookie will be '', so the event.locals.theme will resolve to null.
-      // For that single request, we default to the defaultTheme
-      html.replaceAll('$theme$', event.locals.theme || defaultTheme)
-  });
+type ParsedCookiesSchema = {
+  theme: string;
 };
 
-export const getSession: GetSession = ({ locals }) => {
-  const theme = locals.theme;
-  return { theme };
+export const handle: Handle = async ({ event, resolve }) => {
+  const { theme } = parseCookies<ParsedCookiesSchema>(event);
+  if (validateTheme(theme)) {
+    event.locals.theme = theme;
+  } else event.locals.theme = null;
+
+  return resolve(event, {
+    transformPageChunk: ({ html }) => html.replaceAll('$theme$', event.locals.theme || defaultTheme)
+  });
 };

@@ -11,7 +11,6 @@ type ErrObj = {
   message: string;
   hasErr: boolean;
 };
-
 type RegisterStore = {
   err: {
     email: ErrObj;
@@ -152,8 +151,7 @@ const registerValidator = z
       .string()
       .refine(
         username =>
-          username.length >= USERNAME_MIN_LENGTH &&
-          username.length <= USERNAME_MAX_LENGTH,
+          username.length >= USERNAME_MIN_LENGTH && username.length <= USERNAME_MAX_LENGTH,
         {
           message: `Must be between ${USERNAME_MIN_LENGTH} and ${USERNAME_MAX_LENGTH} character`
         }
@@ -162,8 +160,7 @@ const registerValidator = z
       .string()
       .refine(
         password =>
-          password.length >= PASSWORD_MIN_LENGTH &&
-          password.length <= PASSWORD_MAX_LENGTH,
+          password.length >= PASSWORD_MIN_LENGTH && password.length <= PASSWORD_MAX_LENGTH,
         {
           message: `Must be between ${PASSWORD_MIN_LENGTH} and ${PASSWORD_MAX_LENGTH} character`
         }
@@ -181,8 +178,7 @@ const registerValidator = z
   })
   .refine(
     data => {
-      const result =
-        data.password === data.confirmPassword && data.confirmPassword !== '';
+      const result = data.password === data.confirmPassword && data.confirmPassword !== '';
       console.log(result);
       return result;
     },

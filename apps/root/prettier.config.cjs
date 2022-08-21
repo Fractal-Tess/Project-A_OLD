@@ -1,6 +1,6 @@
-const config = require('../../prettier.config.cjs');
+const monorepoConfig = require('@package/config/prettier.config.cjs');
 
 module.exports = {
-  ...config,
+  ...monorepoConfig,
   plugins: [require('prettier-plugin-svelte')]
 };

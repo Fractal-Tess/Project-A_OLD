@@ -1,0 +1,30 @@
+{
+  "name": "@package/common",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "sync": "svelte-kit sync"
+  },
+  "inherits": [
+    "@package/dependencies/svelte.json",
+    "@package/dependencies/kit.json"
+  ],
+  "devDependencies": {
+    "@package/types": "workspace:*",
+    "@package/utils": "workspace:*",
+    "@types/cookie": "^0.5.1",
+    "cross-env": "^7.0.3",
+    "zod": "^3.18.0",
+    "@sveltejs/adapter-node": "1.0.0-next.86",
+    "@sveltejs/kit": "1.0.0-next.428",
+    "svelte": "^3.49.0",
+    "svelte-check": "^2.8.1",
+    "svelte-preprocess": "^4.10.7",
+    "vite": "^3.0.6",
+    "@tsconfig/svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "cookie": "^0.5.0",
+    "moment": "^2.29.4"
+  }
+}

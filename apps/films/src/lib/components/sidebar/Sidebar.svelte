@@ -4,15 +4,8 @@
   import { appWindow } from '@tauri-apps/api/window';
 </script>
 
-<div
-  data-tauri-drag-region
-  class="h-12 bg-base-100 shadow-lg items-center justify-between flex "
->
-  <button
-    on:click={theme.toggleTheme}
-    class="hover:text-secondary ml-2"
-    aria-live="polite"
-  >
+<div data-tauri-drag-region class="h-12 bg-base-100 shadow-lg items-center justify-between flex ">
+  <button on:click={theme.toggleTheme} class="hover:text-secondary ml-2" aria-live="polite">
     <ThemeToggleIcon cssClass={'w-8'} />
   </button>
 

@@ -7,14 +7,7 @@
     <rect x="0" y="0" width="100%" height="100%" fill="white" />
     <circle cx="24" cy="10" r="6" fill="black" />
   </mask>
-  <circle
-    class="sun"
-    cx="12"
-    cy="12"
-    r="6"
-    mask="url(#moon-mask)"
-    fill="currentColor"
-  />
+  <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
   <g class="sun-beams" stroke="currentColor" stroke-width="2px">
     <line x1="12" y1="1" x2="12" y2="3" />
     <line x1="12" y1="21" x2="12" y2="23" />

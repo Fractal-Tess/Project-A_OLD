@@ -26,8 +26,7 @@
 
     <!-- Password -->
     <InputGroup
-      displayErr={$loginStore.showErrors &&
-        !!$loginStore.validationErrs.fieldErrors.password}
+      displayErr={$loginStore.showErrors && !!$loginStore.validationErrs.fieldErrors.password}
       isValid={!$loginStore.validationErrs.fieldErrors.password}
       errLabel={$loginStore.validationErrs.fieldErrors.password &&
         $loginStore.validationErrs.fieldErrors.password[0]}
@@ -40,11 +39,7 @@
 
     <!-- Recover account -->
     <label class="label label-text-alt">
-      <button
-        type="button"
-        on:click|preventDefault={gotoRecovery}
-        class="label-text-alt"
-      >
+      <button type="button" on:click|preventDefault={gotoRecovery} class="label-text-alt">
         <span
           class="text-secondary underline underline-offset-2 decoration-secondary cursor-pointer"
           >Forgot your password?</span
@@ -56,16 +51,12 @@
     <button
       on:click|preventDefault={loginStore.submit}
       type="submit"
-      class="{$loginStore.isValid
-        ? ''
-        : 'btn-ghost btn-outline'} btn btn-secondary mt-8">Login</button
+      class="{$loginStore.isValid ? '' : 'btn-ghost btn-outline'} btn btn-secondary mt-8"
+      >Login</button
     >
     <label class="label label-text-alt">
       Don't have an account?
-      <button
-        on:click|preventDefault={gotoRegister}
-        class="label-text-alt cursor-default"
-      >
+      <button on:click|preventDefault={gotoRegister} class="label-text-alt cursor-default">
         <span
           class="ml-2 text-secondary underline underline-offset-2 decoration-secondary cursor-pointer"
           >Create one</span

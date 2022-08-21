@@ -1,11 +1,23 @@
 {
-  "name": "utils",
+  "name": "@package/utils",
   "version": "0.0.1",
-  "devDependencies": {
-    "@types/cookie": "^0.5.1",
+  "type": "module",
+  "inherits": [
+    "@package/dependencies/svelte.json",
+    "@package/dependencies/kit.json"
+  ],
+  "dependencies": {
     "cookie": "^0.5.0",
     "moment": "^2.29.4",
-    "types": "workspace:*",
     "zod": "^3.18.0"
+  },
+  "devDependencies": {
+    "@package/types": "workspace:*",
+    "@types/cookie": "^0.5.1",
+    "svelte": "^3.49.0",
+    "svelte-check": "^2.8.1",
+    "svelte-preprocess": "^4.10.7",
+    "@tsconfig/svelte": "^3.0.0",
+    "@sveltejs/kit": "1.0.0-next.428"
   }
 }
