@@ -20,5 +20,15 @@
       "$styles": ["./src/styles/app.scss"],
       "$src/*": ["./src/*"]
     }
-  }
+  },
+  "include": [
+    "./src/app.d.ts",
+    "./src/**/*.js",
+    "./src/**/*.ts",
+    "./src/**/*.svelte",
+    "./tests/**/*.js",
+    "./tests/**/*.ts",
+    "./tests/**/*.svelte",
+    "./vite.config.ts"
+  ]
 }

@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
-const getPath = path => new URL(path, import.meta.url).pathname;
+const getPath = (path: string) => new URL(path, import.meta.url).pathname;
 
 const isDev = process.env.NODE_ENV === 'development' ? true : false;
 
