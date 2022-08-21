@@ -1,0 +1,7 @@
+# Svelte
+.svelte-kit
+build
+dist
+
+**.min.js
+**.min.css
