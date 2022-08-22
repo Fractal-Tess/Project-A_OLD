@@ -1,6 +1,9 @@
 import { writable } from 'svelte/store';
 import { validateFields } from './validator';
-import type { RegisterStoreSchema, RegisterSchema } from '@package/types/auth/Register';
+import type {
+  RegisterStoreSchema,
+  RegisterSchema
+} from '@package/types/auth/Register';
 
 const createRegisterStore = () => {
   const formFields: RegisterSchema = {

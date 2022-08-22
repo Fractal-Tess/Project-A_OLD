@@ -47,7 +47,8 @@
 
     <!-- confirm password -->
     <Label
-      displayErr={$registerStore.showErrs && $registerStore.err.confirmPassword.hasErr}
+      displayErr={$registerStore.showErrs &&
+        $registerStore.err.confirmPassword.hasErr}
       errLabel={$registerStore.err.confirmPassword.message}
       normalLabel="Confrim password"
       target="confirmPassword"
@@ -63,14 +64,19 @@
       on:mouseover={registerStore.showErrs}
       on:focus={registerStore.showErrs}
       type="submit"
-      class="{$registerStore.isValid ? '' : 'glass btn-ghost'} {$registerStore.submitInProgress
+      class="{$registerStore.isValid
+        ? ''
+        : 'glass btn-ghost'} {$registerStore.submitInProgress
         ? 'loading'
         : ''} btn btn-primary mt-8">Register</button
     >
     <!-- Already got an account switch link -->
     <label class="label label-text-alt">
       Already have an account?
-      <button on:click|preventDefault={gotoLogin} class="label-text-alt cursor-default">
+      <button
+        on:click|preventDefault={gotoLogin}
+        class="label-text-alt cursor-default"
+      >
         <span
           class="ml-2 text-secondary underline underline-offset-2 decoration-secondary cursor-pointer"
           >Login here</span

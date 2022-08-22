@@ -17,7 +17,9 @@
   }
 </script>
 
-<div class="font-roboto flex flex-col bg-base-100 text-base-content min-h-screen">
+<div
+  class="font-roboto flex flex-col bg-base-100 text-base-content min-h-screen"
+>
   <Header toggleTheme={themeStore.toggleTheme} />
   <slot />
 </div>

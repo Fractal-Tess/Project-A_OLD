@@ -1,4 +1,7 @@
-import type { LoginStoreSchema, ValidatorSchema } from '@package/types/auth/Login';
+import type {
+  LoginStoreSchema,
+  ValidatorSchema
+} from '@package/types/auth/Login';
 import { z } from 'zod';
 
 // TODO: Move those into .env file

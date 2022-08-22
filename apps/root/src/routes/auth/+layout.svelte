@@ -26,7 +26,11 @@
             backdropColorVariable={$authValidityStore.isValid ? 'p' : 's'}
           />
         </div>
-        <SimpleTransition transitionKey={data.currentHref} {transitionDuration} class="flex-1">
+        <SimpleTransition
+          transitionKey={data.currentHref}
+          {transitionDuration}
+          class="flex-1"
+        >
           <slot />
         </SimpleTransition>
       </div>

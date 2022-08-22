@@ -42,8 +42,14 @@ const validationSchema = z.object({
 
   password: z
     .string()
-    .min(PASSWORD_MIN_LENGTH, `Needs to be at least ${PASSWORD_MIN_LENGTH} characters `)
-    .max(PASSWORD_MAX_LENGTH, `Needs to be at at most ${PASSWORD_MAX_LENGTH} characters `)
+    .min(
+      PASSWORD_MIN_LENGTH,
+      `Needs to be at least ${PASSWORD_MIN_LENGTH} characters `
+    )
+    .max(
+      PASSWORD_MAX_LENGTH,
+      `Needs to be at at most ${PASSWORD_MAX_LENGTH} characters `
+    )
 });
 
 const createLoginStore = () => {

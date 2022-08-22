@@ -43,7 +43,8 @@
     type="password"
     showErrorLabel={$registerStore.showErrors}
     fieldIsValid={!Boolean($registerStore.errors.fieldErrors.confirmPassword)}
-    errorLabelText={$registerStore.errors.fieldErrors.confirmPassword?.[0] ?? ''}
+    errorLabelText={$registerStore.errors.fieldErrors.confirmPassword?.[0] ??
+      ''}
   />
   <SubmitBtn text="Login" isValid={$registerStore.allIsValid} />
 </form>

@@ -1,4 +1,7 @@
-import type { RecoveryStoreSchema, ValidatorSchema } from '@package/types/auth/Recovery';
+import type {
+  RecoveryStoreSchema,
+  ValidatorSchema
+} from '@package/types/auth/Recovery';
 import { z } from 'zod';
 
 const validatorConfig: ValidatorSchema = {

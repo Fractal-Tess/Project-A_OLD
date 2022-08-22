@@ -16,9 +16,9 @@
     "zod": "^3.18.0"
   },
   "devDependencies": {
+    "@package/config": "workspace:*",
     "@package/types": "workspace:*",
     "@package/dependencies": "workspace:*",
-    "@package/config": "workspace:*",
     "@types/cookie": "^0.5.1",
     "svelte": "^3.49.0",
     "svelte-check": "^2.8.1",

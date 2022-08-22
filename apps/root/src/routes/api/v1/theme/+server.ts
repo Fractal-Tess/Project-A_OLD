@@ -20,11 +20,14 @@ export const PUT: RequestHandler = async ({ request }) => {
       }
     });
   } catch (error) {
-    return new Response(JSON.stringify({ message: 'Unable to parse request' }), {
-      headers: {
-        'content-type': 'application/json'
-      },
-      status: 400
-    });
+    return new Response(
+      JSON.stringify({ message: 'Unable to parse request' }),
+      {
+        headers: {
+          'content-type': 'application/json'
+        },
+        status: 400
+      }
+    );
   }
 };

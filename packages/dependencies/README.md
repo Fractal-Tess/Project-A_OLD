@@ -5,11 +5,14 @@
 ```
     A package for centralizing and versioning external dependencies
 ```
+
 ---
+
 <br>
 To use, create a *.json file and define some dependencies. For example:
 
 `kit.json`
+
 ```json
 {
   "devDependencies": {
@@ -20,16 +23,13 @@ To use, create a *.json file and define some dependencies. For example:
 
 Now, import this dependencies into another `package.json` under the inherits property. Example:
 
-
 ```json
 {
   "name": "any",
   "version": "0.0.1",
-  "inherits": [
-    "@package/dependencies/kit.json",
-  ],
+  "inherits": ["@package/dependencies/kit.json"],
   "devDependencies": {
-    "@sveltejs/kit": "1.0.0-next.428",
+    "@sveltejs/kit": "1.0.0-next.428"
   }
 }
 ```

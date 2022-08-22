@@ -1,4 +1,7 @@
-import type { RegisterStoreSchema, ValidatorSchema } from '@package/types/auth/Register';
+import type {
+  RegisterStoreSchema,
+  ValidatorSchema
+} from '@package/types/auth/Register';
 import { z } from 'zod';
 
 // TODO: Move these into an .env file
@@ -9,7 +12,10 @@ const PASSWORD_MIN_LENGTH = 6;
 
 const validatorConfig: ValidatorSchema = {
   email: z.string().email(),
-  username: z.string().min(USERNAME_OR_EMAIL_MIN_LENGTH).max(USERNAME_OR_EMAIL_MAX_LENGTH),
+  username: z
+    .string()
+    .min(USERNAME_OR_EMAIL_MIN_LENGTH)
+    .max(USERNAME_OR_EMAIL_MAX_LENGTH),
   password: z.string().min(PASSWORD_MIN_LENGTH).max(PASSWORD_MAX_LENGTH),
   confirmPassword: z.string()
 };

@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 
-const getPath = (path: string): string => new URL(path, import.meta.url).pathname;
+const getPath = (path: string): string =>
+  new URL(path, import.meta.url).pathname;
 
 export default defineConfig({
   plugins: [svelte()],

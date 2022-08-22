@@ -18,7 +18,9 @@
       <div>User component</div>
     {:else}
       <a href="/auth/login" class=" shadow-lg btn-outline btn btn-sm ">Login</a>
-      <a href="/auth/register" class=" shadow-lg btn-outline btn btn-sm ">Register</a>
+      <a href="/auth/register" class=" shadow-lg btn-outline btn btn-sm "
+        >Register</a
+      >
     {/if}
 
     <ThemeToggle onClick={toggleTheme} />

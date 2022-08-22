@@ -28,9 +28,27 @@
 {/if}
 
 {#if inputType === 'email'}
-  <input bind:value={valueBind} id={target} type="email" {placeholder} class={inputStyleClass} />
+  <input
+    bind:value={valueBind}
+    id={target}
+    type="email"
+    {placeholder}
+    class={inputStyleClass}
+  />
 {:else if inputType === 'password'}
-  <input bind:value={valueBind} id={target} type="password" {placeholder} class={inputStyleClass} />
+  <input
+    bind:value={valueBind}
+    id={target}
+    type="password"
+    {placeholder}
+    class={inputStyleClass}
+  />
 {:else if inputType === 'text'}
-  <input bind:value={valueBind} id={target} type="text" {placeholder} class={inputStyleClass} />
+  <input
+    bind:value={valueBind}
+    id={target}
+    type="text"
+    {placeholder}
+    class={inputStyleClass}
+  />
 {/if}

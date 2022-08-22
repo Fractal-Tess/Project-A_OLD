@@ -13,6 +13,7 @@ export const handle: Handle = async ({ event, resolve }) => {
   } else event.locals.theme = null;
 
   return resolve(event, {
-    transformPageChunk: ({ html }) => html.replaceAll('$theme$', event.locals.theme || defaultTheme)
+    transformPageChunk: ({ html }) =>
+      html.replaceAll('$theme$', event.locals.theme || defaultTheme)
   });
 };

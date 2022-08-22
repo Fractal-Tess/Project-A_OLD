@@ -1,5 +1,12 @@
 {
+  "scripts": {
+    "format": "prettier --write --plugin-search-dir=. ."
+  },
   "name": "@package/dependencies",
   "version": "0.0.1",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@package/config": "workspace:*",
+    "prettier": "^2.7.1"
+  }
 }

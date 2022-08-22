@@ -17,5 +17,12 @@
     "module": "esnext",
     "target": "esnext"
   },
-  "include": ["**/*.js", "**/*.ts", "**/*.svelte", "**/*.js", "**/*.ts", "**/*.svelte"]
+  "include": [
+    "**/*.js",
+    "**/*.ts",
+    "**/*.svelte",
+    "**/*.js",
+    "**/*.ts",
+    "**/*.svelte"
+  ]
 }

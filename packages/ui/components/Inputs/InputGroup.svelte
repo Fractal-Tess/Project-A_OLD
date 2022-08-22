@@ -10,10 +10,12 @@
 
   export let fieldIsValid: boolean = false;
 
-  const defaultInputStyle = 'input input-bordered focus:outline-none w-full mt-2 shadow-2xl';
+  const defaultInputStyle =
+    'input input-bordered focus:outline-none w-full mt-2 shadow-2xl';
   let inputStyleClass = defaultInputStyle;
   $: {
-    inputStyleClass = `${fieldIsValid ? 'input-primary' : 'input-error'} ` + defaultInputStyle;
+    inputStyleClass =
+      `${fieldIsValid ? 'input-primary' : 'input-error'} ` + defaultInputStyle;
   }
 
   // TODO: Add more positions
@@ -34,11 +36,29 @@
     {/if}
   </label>
   {#if type === 'email'}
-    <input bind:value id={labelFor} type="email" {placeholder} class={inputStyleClass} />
+    <input
+      bind:value
+      id={labelFor}
+      type="email"
+      {placeholder}
+      class={inputStyleClass}
+    />
   {:else if type === 'text'}
-    <input bind:value id={labelFor} type="text" {placeholder} class={inputStyleClass} />
+    <input
+      bind:value
+      id={labelFor}
+      type="text"
+      {placeholder}
+      class={inputStyleClass}
+    />
   {:else if type === 'password'}
-    <input bind:value id={labelFor} type="password" {placeholder} class={inputStyleClass} />
+    <input
+      bind:value
+      id={labelFor}
+      type="password"
+      {placeholder}
+      class={inputStyleClass}
+    />
   {:else}
     <div>This should be unreachable</div>
   {/if}

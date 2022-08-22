@@ -31,7 +31,10 @@
       </div>
       <div class="flex-1 text-2xl font-bold">
         {#if authState === 'login'}
-          <Login gotoRegister={changeRoute.register} gotoRecovery={changeRoute.recovery} />
+          <Login
+            gotoRegister={changeRoute.register}
+            gotoRecovery={changeRoute.recovery}
+          />
         {:else if authState === 'register'}
           <Register gotoLogin={changeRoute.login} />
         {:else if authState === 'recovery'}

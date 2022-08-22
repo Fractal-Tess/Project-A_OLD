@@ -2,6 +2,9 @@
   "name": "@package/config",
   "version": "0.0.1",
   "type": "module",
+  "scripts": {
+    "format": "prettier --write --plugin-search-dir=. ."
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
     "daisyui": "^2.22.0",

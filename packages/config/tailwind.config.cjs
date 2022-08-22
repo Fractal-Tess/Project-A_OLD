@@ -6,7 +6,10 @@ const ui_path = join(__dirname, '../ui');
 
 /** @type {import('tailwindcss').Config} */
 const config = {
-  content: [`${ui_path}/components/**/*.{html,js,svelte,ts}`, 'src/**/*.{html,js,svelte,ts}'],
+  content: [
+    `${ui_path}/components/**/*.{html,js,svelte,ts}`,
+    'src/**/*.{html,js,svelte,ts}'
+  ],
   darkMode: 'class',
 
   theme: {
@@ -29,7 +32,8 @@ const config = {
         }
       },
       animation: {
-        'gradient-animation-x': 'gradient-keyframes-x 5s linear infinite alternate'
+        'gradient-animation-x':
+          'gradient-keyframes-x 5s linear infinite alternate'
       }
     }
   },

@@ -11,6 +11,7 @@
     "baseUrl": ".",
     "moduleResolution": "node",
     "module": "esnext",
-    "target": "esnext",
-  }
+    "target": "esnext"
+  },
+  "include": ["../config/prettier.config.cjs"]
 }

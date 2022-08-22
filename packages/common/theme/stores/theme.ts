@@ -1,9 +1,9 @@
-import {requestSetCookieTheme} from '@package/utils/theme/cookie'
-import { defaultTheme } from '@package/utils/theme/defaultTheme'
+import { requestSetCookieTheme } from '@package/utils/theme/cookie';
+import { defaultTheme } from '@package/utils/theme/defaultTheme';
 import { writable } from 'svelte/store';
-import { browser } from '$app/env'
+import { browser } from '$app/env';
 
-import type { Theme } from '@package/types/theme'
+import type { Theme } from '@package/types/theme';
 
 const getPreferredTheme = (): Theme =>
   window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
