@@ -1,16 +1,20 @@
-import { z } from 'zod';
+import { ZodString, ZodObject, ZodTypeAny } from 'zod';
 import type { AuthStore } from './AuthStoreType';
 
-export type RecoverySchema = {
+type RecoverySchema = {
   email: string;
 };
 
-type ValidationType = z.ZodObject<
-  { [key in keyof RecoverySchema]: z.ZodString },
+type ValidationType = ZodObject<
+  { [key in keyof RecoverySchema]: ZodString },
   'strip',
-  z.ZodTypeAny,
+  ZodTypeAny,
   RecoverySchema,
   RecoverySchema
 >;
+
+export type ValidatorSchema = {
+  [key in keyof RecoverySchema]: ZodString;
+};
 
 export type RecoveryStoreSchema = AuthStore<RecoverySchema, ValidationType>;

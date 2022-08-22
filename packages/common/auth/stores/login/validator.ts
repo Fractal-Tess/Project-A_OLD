@@ -1,6 +1,7 @@
-import type { LoginStoreSchema, ValidationType, ValidatorSchema } from '@package/types/auth/Login';
+import type { LoginStoreSchema, ValidatorSchema } from '@package/types/auth/Login';
 import { z } from 'zod';
 
+// TODO: Move those into .env file
 const USERNAME_OR_EMAIL_MIN_LENGTH = 3;
 const USERNAME_OR_EMAIL_MAX_LENGTH = 30;
 const PASSWORD_MAX_LENGTH = 30;
@@ -25,7 +26,7 @@ const validatorConfig: ValidatorSchema = {
     })
 };
 
-const validator: ValidationType = z.object(validatorConfig);
+const validator = z.object(validatorConfig);
 
 export const validateFields = (
   fields: LoginStoreSchema['formFields']

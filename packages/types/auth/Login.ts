@@ -6,7 +6,7 @@ export type LoginSchema = {
   password: string;
 };
 
-export type ValidationType = ZodObject<
+type ValidationType = ZodObject<
   { [key in keyof LoginSchema]: ZodString },
   'strip',
   ZodTypeAny,

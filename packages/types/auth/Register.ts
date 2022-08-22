@@ -1,17 +1,25 @@
-import { z } from 'zod';
+import { ZodString, ZodObject, ZodTypeAny } from 'zod';
 import type { AuthStore } from './AuthStoreType';
 
 export type RegisterSchema = {
-  usernameOrEmail: string;
+  email: string;
+  username: string;
   password: string;
+  confirmPassword: string;
 };
 
-type ValidationType = z.ZodObject<
-  { [key in keyof RegisterSchema]: z.ZodString },
+// This type does not 100% match the validation object of the register validator,
+// because it also uses a refine to check if passwords match
+type ValidationType = ZodObject<
+  { [key in keyof RegisterSchema]: ZodString },
   'strip',
-  z.ZodTypeAny,
+  ZodTypeAny,
   RegisterSchema,
   RegisterSchema
 >;
+
+export type ValidatorSchema = {
+  [key in keyof RegisterSchema]: ZodString;
+};
 
 export type RegisterStoreSchema = AuthStore<RegisterSchema, ValidationType>;

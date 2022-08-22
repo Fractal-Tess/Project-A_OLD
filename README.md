@@ -2,7 +2,7 @@
 
 <div align="center">
 <br />
-<img alt="Electron Svelte Crossover Banner" src="https://raw.githubusercontent.com/Fractal-Tess/Jet-Black/main/app.png" width="580" style="border-radius:2rem"/>
+<img src="https://raw.githubusercontent.com/Fractal-Tess/Jet-Black/main/app.png" width="580" style="border-radius:2rem"/>
 </div>
 <br />
 <br />
