@@ -20,7 +20,7 @@
   <div class="hero-content max-w-5xl md:pt-20">
     <GradientContainer>
       <div class="flex">
-        <div class="w-1/2 hidden md:flex d">
+        <div class="w-1/2 hidden md:flex">
           <YorSplash
             backdrop={true}
             backdropColorVariable={$authValidityStore.isValid ? 'p' : 's'}
