@@ -4,11 +4,10 @@ import moment from 'moment';
 
 export const setThemeCookie = (theme: Theme): string => {
   return cookie.serialize('theme', theme, {
-    path: "/",
+    path: '/',
     maxAge: moment().add(30, 'years').valueOf()
-  })
+  });
 };
-
 
 // TODO: Fix the static api route for sup domain apps
 export const requestSetCookieTheme = (theme: Theme) => {

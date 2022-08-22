@@ -36,8 +36,14 @@ const createRegisterStore = () => {
           ls.showErrors = true;
           return ls;
         }
+        fetch('/api/v1/auth/register', {
+          method: 'POST',
+          body: JSON.stringify(ls.formFields),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
 
-        console.log('Not implemented yet');
         return ls;
       });
     }

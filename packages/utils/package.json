@@ -2,9 +2,13 @@
   "name": "@package/utils",
   "version": "0.0.1",
   "type": "module",
+  "scripts": {
+    "format": "prettier --write --plugin-search-dir=. ."
+  },
   "inherits": [
     "@package/dependencies/svelte.json",
-    "@package/dependencies/kit.json"
+    "@package/dependencies/kit.json",
+    "@package/dependencies/prettier.json"
   ],
   "dependencies": {
     "cookie": "^0.5.0",
@@ -13,11 +17,14 @@
   },
   "devDependencies": {
     "@package/types": "workspace:*",
+    "@package/dependencies": "workspace:*",
+    "@package/config": "workspace:*",
     "@types/cookie": "^0.5.1",
     "svelte": "^3.49.0",
     "svelte-check": "^2.8.1",
     "svelte-preprocess": "^4.10.7",
     "@tsconfig/svelte": "^3.0.0",
-    "@sveltejs/kit": "1.0.0-next.428"
+    "@sveltejs/kit": "1.0.0-next.428",
+    "prettier": "^2.7.1"
   }
 }
