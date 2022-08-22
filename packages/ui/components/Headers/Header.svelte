@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Logo from '../Logos/HeaderLogo.svelte'
-  import ThemeToggle from '../Themes/ThemeToggle.svelte'
-  
+  import Logo from '../Logos/HeaderLogo.svelte';
+  import ThemeToggle from '../Themes/ThemeToggle.svelte';
+
   export let logoBreakpoint = '768px';
   export let toggleTheme: () => void;
   const user = false;
