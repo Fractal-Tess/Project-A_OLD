@@ -27,13 +27,12 @@
     "tauri-plugin-store-api": "github:tauri-apps/tauri-plugin-store#dev",
     "tinro": "^0.6.12",
     "zod": "^3.18.0",
-    "@package/common": "workspace:*",
-    "@package/utils": "workspace:*",
-    "@package/config": "workspace:*",
-    "@package/fonts": "workspace:*",
-    "@package/assets": "workspace:*",
-    "@package/ui": "workspace:*",
-    "@package/types": "workspace:*",
+    "@package/utils": "*",
+    "@package/config": "*",
+    "@package/fonts": "*",
+    "@package/assets": "*",
+    "@package/ui": "*",
+    "@package/types": "*",
     "@fortawesome/fontawesome-free": "^6.1.2",
     "vite": "^3.0.9",
     "svelte-check": "^2.8.1",
@@ -51,6 +50,7 @@
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
     "postcss-load-config": "^4.0.1",
     "@tauri-apps/api": "^1.0.2",
-    "@tauri-apps/cli": "^1.0.5"
+    "@tauri-apps/cli": "^1.0.5",
+    "@package/prisma": "*"
   }
 }
