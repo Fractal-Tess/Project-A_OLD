@@ -1,9 +1,8 @@
 {
   "name": "@package/fonts",
   "version": "0.0.1",
-  "type": "module",
+  "license": "MIT",
   "devDependencies": {
-    "@fontsource/alumni-sans-inline-one": "^4.5.2",
     "@fontsource/fira-code": "^4.5.11",
     "@fontsource/fira-mono": "^4.5.9",
     "@fontsource/fira-sans": "^4.5.9",
