@@ -8,7 +8,7 @@
   "name": "@package/types",
   "version": "0.0.1",
   "devDependencies": {
-    "@package/config": "workspace:*",
+    "@package/config": "*",
     "@types/cookies": "^0.7.7",
     "cookie": "^0.5.0",
     "zod": "^3.18.0",
