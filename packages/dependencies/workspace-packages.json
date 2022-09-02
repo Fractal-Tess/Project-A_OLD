@@ -1,11 +1,11 @@
 {
   "devDependencies": {
-    "@package/common": "workspace:*",
-    "@package/utils": "workspace:*",
-    "@package/config": "workspace:*",
-    "@package/fonts": "workspace:*",
-    "@package/assets": "workspace:*",
-    "@package/ui": "workspace:*",
-    "@package/types": "workspace:*"
+    "@package/utils": "*",
+    "@package/config": "*",
+    "@package/fonts": "*",
+    "@package/assets": "*",
+    "@package/ui": "*",
+    "@package/types": "*",
+    "@package/prisma": "*"
   }
 }

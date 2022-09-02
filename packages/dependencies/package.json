@@ -6,7 +6,7 @@
   "version": "0.0.1",
   "type": "module",
   "dependencies": {
-    "@package/config": "workspace:*",
+    "@package/config": "*",
     "prettier": "^2.7.1"
   }
 }
