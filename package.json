@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
+  "license": "MIT",
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -11,12 +12,24 @@
     "preinstall": "node ./tools/package-inherit/dist/package-inherit-cli.js update",
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "format": "turbo run format"
+    "format": "turbo run format",
+    ".": ".",
+    "prisma:generate": "yarn workspace @package/prisma generate",
+    "dev:prisma:studio": "yarn workspace @package/prisma  dev:studio",
+    "dev:prisma:pull": "yarn workspace @package/prisma  dev:pull",
+    "dev:prisma:push": "yarn workspace @package/prisma  dev:push",
+    "dev:prisma:migrate:dev": "yarn workspace @package/prisma  dev:migrate",
+    "dev:prisma:migrate:reset": "yarn workspace @package/prisma  dev:migrate:reset"
   },
   "devDependencies": {
-    "@package/config":"workspace:*",
+    "@package/config": "*",
     "@types/node": "^18.7.8",
     "prettier-plugin-svelte": "^2.7.0",
-    "turbo": "latest"
-  }
+    "turbo": "1.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fractal-Tess/Jet-Black"
+  },
+  "packageManager": "yarn@1.22.19"
 }
