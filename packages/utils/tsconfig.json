@@ -9,9 +9,9 @@
     "sourceMap": true,
     "strict": true,
     "baseUrl": ".",
-    "moduleResolution": "node",
-    "module": "esnext",
-    "target": "esnext"
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "target": "ESNext"
   },
-  "include": ["../config/prettier.config.cjs"]
+  "include": ["../config/prettier.config.cjs", "../config/env/environment.d.ts"]
 }
