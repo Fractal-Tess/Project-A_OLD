@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '@package/fonts/node_modules/@fontsource/fira-code/index.css';
-@import '@package/fonts/node_modules/@fontsource/fira-mono/index.css';
-@import '@package/fonts/node_modules/@fontsource/fira-sans/index.css';
-@import '@package/fonts/roboto.css';
+@import '@package/fonts/fonts/roboto/roboto.css';
+@import '@package/fonts/fonts/fira/fira-code.css';
+@import '@package/fonts/fonts/fira/fira-mono.css';
+@import '@package/fonts/fonts/fira/fira-sans.css';
 
 html {
   -webkit-font-smoothing: antialiased;
@@ -15,6 +15,7 @@ html {
 * {
   @apply transition-all;
 
+  // TODO: Remove all of these transitions
   --transition-duration-short: 0.15s;
   --transition-duration-long: 0.4s;
 
@@ -36,10 +37,7 @@ html {
   --ease-elastic-4: cubic-bezier(0.5, 1.5, 0.75, 1.25);
   --ease-elastic-5: cubic-bezier(0.5, 1.75, 0.75, 1.25);
 }
-
-.do {
-  outline: 2px solid red;
-}
+// Class used for debugging purposes
 .d {
-  border: 2px solid red;
+  border: 1px solid red;
 }
