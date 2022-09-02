@@ -1,9 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
-
-const getPath = (path: string) => new URL(path, import.meta.url).pathname;
-
-const isDev = process.env.NODE_ENV === 'development' ? true : false;
+import { resolve } from '@package/utils/path/index.js';
+import { isDev } from '@package/config/env/index.js';
 
 export default defineConfig({
   plugins: [sveltekit()],
@@ -15,10 +13,11 @@ export default defineConfig({
       }
     }
   },
+
   resolve: {
     alias: {
-      $styles: getPath('./src/styles/app.scss'),
-      $src: getPath('./src/')
+      $styles: resolve(import.meta.url, './src/styles/app.scss'),
+      $src: resolve(import.meta.url, './src/')
     }
   },
 
@@ -29,6 +28,7 @@ export default defineConfig({
     strictPort: true,
     host: '0.0.0.0'
   },
+
   build: {
     minify: !isDev,
     sourcemap: isDev
