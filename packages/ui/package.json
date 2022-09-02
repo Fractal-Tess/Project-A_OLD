@@ -10,10 +10,9 @@
     "@package/dependencies/prettier-svelte.json"
   ],
   "devDependencies": {
-    "@package/config": "workspace:*",
-    "@package/dependencies": "workspace:*",
-    "@package/assets": "workspace:*",
-    "@package/common": "workspace:*",
+    "@package/config": "*",
+    "@package/dependencies": "*",
+    "@package/assets": "*",
     "svelte": "^3.49.0",
     "svelte-check": "^2.8.1",
     "svelte-preprocess": "^4.10.7",
