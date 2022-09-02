@@ -1,10 +1,11 @@
 declare namespace App {
-  import type { Theme } from 'config/theme';
-  // interface Stuff {}
   interface Locals {
-    theme: Theme | null;
+    theme: import('@package/types/theme').Theme | null;
   }
+  type PrivateEnv = import('@package/config/env/environment').PrivateEnv;
+  type PublicEnv = import('@package/config/env/environment').PublicEnv;
+
+  // interface Stuff {}
   // interface Platform {}
-  // interface PrivateEnv {}
-  // interface PublicEnv {}
+  // interface ImportMeta {}
 }
