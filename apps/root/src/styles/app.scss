@@ -15,7 +15,8 @@ html {
 * {
   @apply transition-all;
 
-  // TODO: Remove all of these transitions
+  // TODO: Remove all of these transitions #1
+  // If removed, need to also update the theme toggle button's styles
   --transition-duration-short: 0.15s;
   --transition-duration-long: 0.4s;
 
