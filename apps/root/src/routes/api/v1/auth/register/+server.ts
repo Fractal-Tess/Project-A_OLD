@@ -1,7 +1,10 @@
 import type { RequestHandler } from '@sveltejs/kit';
 
 export const POST: RequestHandler = async ({ request }) => {
-  console.log(await request.json());
+  try {
+  } catch (e) {
+    console.log(e);
+  }
 
   return new Response(null, { status: 200 });
 };

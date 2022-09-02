@@ -1,5 +1,5 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { validateTheme } from '@package/utils/theme/validator';
+import { validateTheme } from '@package/utils/validators/theme';
 import { setThemeCookie } from '@package/utils/theme';
 
 export const PUT: RequestHandler = async ({ request }) => {

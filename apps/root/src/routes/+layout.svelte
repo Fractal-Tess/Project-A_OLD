@@ -1,9 +1,9 @@
 <script lang="ts">
   import '$styles';
-  import { browser } from '$app/env';
+  import { browser } from '$app/environment';
   import Header from '@package/ui/components/Headers/Header.svelte';
   import type { LayoutLoadData } from './+layout.server';
-  import { createThemeStore } from '@package/common/theme/stores/theme';
+  import { createThemeStore } from '$lib/stores/theme';
 
   export let data: LayoutLoadData;
 

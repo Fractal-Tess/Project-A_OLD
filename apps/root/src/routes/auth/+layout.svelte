@@ -2,7 +2,6 @@
   import WelcomeMessage from '@package/ui/components/Headings/WelcomeMessage.svelte';
   import GradientContainer from '@package/ui/components/Containers/GradientContainer.svelte';
   import YorSplash from '@package/ui/components/Splash/Yor.svelte';
-  import { authValidityStore } from '@package/common/auth/stores/authValidityStore';
   import SimpleTransition from '@package/ui/components/Transitions/SimpleTransition.svelte';
 
   import type { LayoutLoadData } from './+layout.server';
@@ -21,10 +20,7 @@
     <GradientContainer>
       <div class="flex md:min-h-[650px] ">
         <div class="w-1/2 hidden md:flex">
-          <YorSplash
-            backdrop={true}
-            backdropColorVariable={$authValidityStore.isValid ? 'p' : 's'}
-          />
+          <YorSplash backdrop={true} />
         </div>
         <SimpleTransition
           transitionKey={data.currentHref}
