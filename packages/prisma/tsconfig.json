@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "lib": ["esnext"],
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "target": "ESNext"
+  },
+  "include": ["../config//env/environment.d.ts"]
+}

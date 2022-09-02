@@ -1,0 +1,39 @@
+{
+  "name": "@package/prisma",
+  "version": "0.0.1",
+  "type": "module",
+  "license": "MIT",
+  "config": {
+    "env": {
+      "dev": "env-cmd -f ../config/env/dev/.env",
+      "prod": "env-cmd -f ../config/env/prod/.env"
+    }
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "README": "echo \"Prisma ALWAYS uses the dev .env file\"",
+    "generate": "$npm_package_config_env_dev prisma generate",
+    "dev:pull": "$npm_package_config_env_dev prisma db pull",
+    "dev:push": "$npm_package_config_env_dev prisma db push",
+    "dev:reset": "$npm_package_config_env_dev prisma reset",
+    "dev:studio": "$npm_package_config_env_dev prisma studio",
+    "dev:migrate": "$npm_package_config_env_dev prisma migrate dev",
+    "dev:migrate:reset": "$npm_package_config_env_dev prisma migrate reset"
+  },
+  "inherits": [
+    "@package/dependencies/prettier.json",
+    "@package/dependencies/typescript.json"
+  ],
+  "devDependencies": {
+    "@package/config": "*",
+    "@package/types": "*",
+    "@package/utils": "*",
+    "@prisma/client": "^4.2.1",
+    "env-cmd": "^10.1.0",
+    "prettier": "^2.7.1",
+    "prisma": "^4.2.1",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  }
+}
