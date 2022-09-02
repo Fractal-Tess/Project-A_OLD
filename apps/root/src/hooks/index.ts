@@ -1,6 +1,7 @@
 import type { Handle } from '@sveltejs/kit';
-import { defaultTheme, validateTheme } from '@package/utils/theme';
-import { parseCookies } from '@package/utils/cookies/parseCookies';
+import { defaultTheme } from '@package/utils/theme';
+import { validateTheme } from '@package/utils/validators/theme';
+import { parseCookies } from '@package/utils/parsers/cookies';
 
 type ParsedCookiesSchema = {
   theme: string;
